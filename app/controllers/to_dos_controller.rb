@@ -1,5 +1,5 @@
 class ToDosController < ApplicationController
-  before_action :set_to_do, only: [:edit, :update]
+  before_action :set_to_do, only: [:edit, :update, :destroy]
 
   def index
     @to_dos = ToDo.all
@@ -22,10 +22,15 @@ class ToDosController < ApplicationController
 
   def update
     if @to_do.update(to_do_params)
-      redirect_to to_dos_url
+      redirect_to to_dos_path
     else
       render :edit
     end
+  end
+
+  def destroy
+    @to_do.destroy
+    redirect_to to_dos_path
   end
 
   private
