@@ -8,10 +8,22 @@
     <el-table-column
       prop="expired_at">
     </el-table-column>
+    <el-table-column
+      width="120">
+      <template v-slot="scope">
+    　　<el-button
+        　　@click="destroyToDo(scope.row.id)"
+          type="danger"
+          icon="el-icon-delete"
+          circle></el-button>
+  　　</template>
+    </el-table-column>
+
   </el-table>
 </template>
 <script>
   import axios from 'axios'
+  import {reject} from 'lodash';
   export default {
   data() {
     return {
@@ -23,6 +35,16 @@
       .then(res => {
         this.toDos = res.data
       })
+  },
+  methods: {
+    destroyToDo(id) {
+      axios.delete('/api/v1/to_dos/' + id)
+        .then(res => {
+          if (res.status === 200) {
+            this.toDos = reject(this.toDos, ['id', id]);
+          }
+        });
+    }
   }
 }
 </script>
