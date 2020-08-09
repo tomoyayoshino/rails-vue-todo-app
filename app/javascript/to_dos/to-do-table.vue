@@ -3,8 +3,7 @@
     :data="toDos"
     style="width: 100%"
     @cell-dblclick="showInput">
-    <el-table-column
-      prop="finished">
+    <el-table-column prop="finished">
       <template v-slot="scope">
         <el-checkbox
           v-model="scope.row.finished"
@@ -12,8 +11,7 @@
         </el-checkbox>
       </template>
     </el-table-column>
-    <el-table-column
-      prop="title">
+    <el-table-column prop="title">
       <template v-slot="scope">
         <div>{{ scope.row.title }}</div>
         <el-input
@@ -22,8 +20,7 @@
           @blur="$emit('update', scope.row); hideInput($event.target.parentNode)"></el-input>
       </template>
     </el-table-column>
-    <el-table-column
-      prop="expired_at">
+    <el-table-column prop="expired_at">
       <template slot-scope="scope">
         <div>{{ scope.row.expired_at }}</div>
         <el-date-picker
