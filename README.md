@@ -1,24 +1,12 @@
 # README
+バックエンドをRuby on Rails, フロントエンドをVue.jsで実装したTodoアプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 使用技術
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+|              |version|
+|--------------|-------| 
+|Ruby          |2.6.5  |
+|Ruby on Rails |6.0.3.2|
+|Vue.js　　　　　|2.6.11 |
+|Element UI    |2.13.2 |
+|axios         |0.19.2 |
