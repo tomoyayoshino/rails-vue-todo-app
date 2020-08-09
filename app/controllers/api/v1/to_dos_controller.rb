@@ -1,6 +1,6 @@
 class Api::V1::ToDosController < ActionController::API
   def index
-    @to_dos = ToDo.all
+    @to_dos = ToDo.all.order("expired_at ASC")
   end
 
   def create

@@ -69,12 +69,12 @@
           }
         });
     },
-    updateToDo(id, finished) {
-      axios.patch('/api/v1/to_dos/' + id, {to_do: {finished: finished}})
-        .then(res => {
-          if (res.status === 200) {
-            console.log(res)
-          }
+    updateToDo(toDo) {
+      axios.patch('/api/v1/to_dos/' + toDo.id, {to_do: toDo})
+      .then(res => {
+        if (res.status === 200) {
+          console.log(res)
+        }
       })
     },
     filter(toDos, finished) {
