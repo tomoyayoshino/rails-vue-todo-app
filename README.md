@@ -1,6 +1,8 @@
 # README
 バックエンドをRuby on Rails, フロントエンドをVue.jsで実装したTodoアプリです。
 
+![rails-vue-todo-demo](https://user-images.githubusercontent.com/65991651/89722791-c6f95f00-da28-11ea-891a-83aacc605227.gif)
+
 # 使用技術
 
 |              |version|
