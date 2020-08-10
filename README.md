@@ -1,6 +1,6 @@
 # README
 バックエンドをRuby on Rails, フロントエンドをVue.jsで実装したTodoアプリです。</br>
-一通りのCRUD機能を実装し、完了済みかどうかでタブ分けされています。
+一通りのCRUD機能を実装し、登録されたタスクが完了済みかどうかでタブ分けされています。
 
 ![rails-vue-todo-demo](https://user-images.githubusercontent.com/65991651/89722791-c6f95f00-da28-11ea-891a-83aacc605227.gif)
 
